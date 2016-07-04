@@ -10,16 +10,33 @@ var rooms = [];
 app.listen(80);
 
 function handler(req, res) {
-    fs.readFile(__dirname + '/client/index.html',
-        function (err, data) {
-            if (err) {
-                res.writeHead(500);
-                return res.end('Error loading index.html');
-            }
+    console.log(req.url);
 
-            res.writeHead(200);
-            res.end(data);
-        });
+    if (req.url == '/') {
+        fs.readFile('client/index.html',
+            function (err, data) {
+                //console.log(data);
+                if (err) {
+                    res.writeHead(500);
+                    return res.end('Error loading index.html');
+                }
+
+                res.writeHead(200);
+                res.end(data);
+            });
+    } else {
+        fs.readFile(req.url.slice(1, req.url.length),
+            function (err, data) {
+                //console.log(data);
+                if (err) {
+                    res.writeHead(500);
+                    return res.end('Error loading index.html');
+                }
+
+                res.writeHead(200);
+                res.end(data);
+            });
+    }
 }
 
 

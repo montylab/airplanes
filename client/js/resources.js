@@ -1,13 +1,13 @@
 client.res = {
     images: {},
     imagesSrc: {
-        fuelFull: 'images/fuelFull.png',
-        fuelEmpty: 'images/fuelEmpty.png',
-        bulletsFull: 'images/bulletsFull.png',
-        bulletsEmpty: 'images/bulletsEmpty.png',
-        altitudeMeter: 'images/altitudeMeter.png',
-        altitudePointer: 'images/altitudePointer.png',
-        explosionSprite: 'images/explosionSprite.png'
+        fuelFull: 'client/images/fuelFull.png',
+        fuelEmpty: 'client/images/fuelEmpty.png',
+        bulletsFull: 'client/images/bulletsFull.png',
+        bulletsEmpty: 'client/images/bulletsEmpty.png',
+        altitudeMeter: 'client/images/altitudeMeter.png',
+        altitudePointer: 'client/images/altitudePointer.png',
+        explosionSprite: 'client/images/explosionSprite.png'
     },
 
     drawImage: function (name, ctx, options) {
